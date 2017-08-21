@@ -1,2 +1,2 @@
 # Blog-em-Jekyll
-sites estáticos com Jekyll e markdown
+Sites estáticos com Jekyll e markdown
