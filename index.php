@@ -1,11 +1,9 @@
 <?php
-
 include "database/conexao.php";
 include "database/consultas.php";
-
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Carrinho de Compras em PHP7">
@@ -35,8 +33,8 @@ include "database/consultas.php";
                     <img src="<?php echo $produto['foto']?>" alt="<?php echo $produto['produto']?>" class="card-img-top">
                     <div class="card-body">
                         <h4 class="card-title text-center"><?php echo $produto['produto']?></h4>
-                        <h5 class="card-text text-danger text-center"><?php echo number_format($produto['preco'], 2, ",", "."); ?></h5>
-                        <a href="" class="btn btn-success btn-block">
+                        <h5 class="card-text text-danger text-center"> R$ <?php echo number_format($produto['preco'], 2, ",", "."); ?></h5>
+                        <a href="gerenciamento.php?acao=adicionar&id=<?php echo $produto['id'] ?>" class="btn btn-success btn-block">
                             <i class="fa fa-shopping-cart">Adicionar ao carrinho</i>
                         </a>
                     </div>

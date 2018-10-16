@@ -1,5 +1,6 @@
+<?php include "carrinho/funcoes.php"; ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Carrinho de Compras em PHP7">
@@ -18,7 +19,26 @@
                 
             </ul>
             <h1 class="display-1">Carrinho</h1>
-            <hr>
+            
+<!--            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Produto</th>
+                        <th>Valor</th>
+                        <th></th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                                   
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>                        
+                    </tr>
+                </tbody>
+            </table>-->
 
         </div>
     </body>
