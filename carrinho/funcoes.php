@@ -1,6 +1,6 @@
 <?php
 
-declare(strinc_types=1);
+declare(strict_types=1);
 
 // Iniciando a Sessão no PHP
 if (session_status() == PHP_SESSION_NONE){
@@ -27,7 +27,7 @@ function validaAcaoCarrinho(string $acao): bool
 
 function adicionarProdutoCarrinho(array $produto): bool
 {
-    if(!existeProduto((int) $produto['id'])){
+    if(!existeProduto((int)$produto['id'])){
         $_SESSION['carrinho'][] = $produto;
         return true;
         

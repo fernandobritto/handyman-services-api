@@ -11,7 +11,7 @@ if(validaAcaoCarrinho($acao)){
             if(!is_int($id) || $id == 0){
                 die("Parâmetro Invalido!");
             }else{
-                $produto = $pegarProdutorPorId($id);
+                $produto = $pegarProdutoPorId($id);
                 adicionarProdutoCarrinho($produto);
                 header("location:carrinho.php");
             }

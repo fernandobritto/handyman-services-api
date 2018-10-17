@@ -1,4 +1,7 @@
 <?php include "carrinho/funcoes.php"; ?>
+
+<?php var_dump(getCarrinho()); exit; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
