@@ -1,4 +1,4 @@
 # Carrinho de Compras
-:ok:
+:ballot_box_with_check:
 
 
