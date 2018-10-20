@@ -53,4 +53,18 @@ function getCarrinho()
 {
     return $_SESSION['carrinho'] ?? null;
 }
+
+function excluirProdutoCarrinho(int $id): bool
+{
+    if(isset($_SESSION['carrinho']) && count($_SESSION['carrinho']) > 0)
+    {
+        foreach ($_SESSION['carrinho'] as $i => $item){
+            if($item['id'] == $id){
+            unset($_SESSION['carrinho'][$i]);    
+                return true;
+            }            
+        }
+    }
+    return false;
+}
     

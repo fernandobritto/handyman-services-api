@@ -15,6 +15,16 @@ if(validaAcaoCarrinho($acao)){
                 adicionarProdutoCarrinho($produto);
                 header("location:carrinho.php");
             }
+            break;
+            
+         case "excluir":
+            if(!is_int($id) || $id == 0){
+                die("Parâmetro Invalido!!!");
+            }else{   
+                excluirProdutoCarrinho($id);
+                header("location:carrinho.php");
+            }
+            break;
     }      
     
 }else{
