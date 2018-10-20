@@ -1,7 +1,5 @@
 <?php include "carrinho/funcoes.php"; ?>
 
-<?php var_dump(getCarrinho()); exit; ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -23,7 +21,7 @@
             </ul>
             <h1 class="display-1">Carrinho</h1>
             
-<!--            <table class="table table-hover table-striped">
+            <table class="table table-hover table-striped">
                 <thead>
                     <tr>
                         <th></th>
@@ -33,15 +31,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                                   
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>                        
-                    </tr>
+                <?php 
+                    $carrinho = getCarrinho();
+                    if(is_null($carrinho) || count($carrinho) == 0):
+                ?> 
+                <tr>
+                    <td colspan="4" class="bg-info">
+                        Nenhum produto no Carrinho
+                    </td>
+                </tr>
+                <?php else:
+                    foreach ($carrinho as $item):                
+                ?>        
+                <tr>
+                    <td><img src="<?php echo $item['foto']; ?>" alt="" height="40"></td>
+                    <td>
+                        <h5><?php echo $item['produto'] ?></h5>
+                        <small><?php echo substr($item['descricao'], 0, 200) ?></small>
+                    </td>
+                    <td>
+                        R$ <?php echo number_format($item['preco'], 2, ",", ".") ?>
+                    </td>
+                    <td>
+                        <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    </td>                        
+                </tr>
+                <?php endforeach; endif; ?>
                 </tbody>
-            </table>-->
+            </table>
 
         </div>
     </body>

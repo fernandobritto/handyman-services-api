@@ -19,7 +19,7 @@ $listarTodos = function() use($conn)
     
 };
     
-$pegarProdutorPorId = function() use($conn)
+$pegarProdutoPorId = function(int $id) use($conn)
 {
     $sql =  "SELECT * FROM produtos WHERE id = $id";
     $result = mysqli_query($conn, $sql);

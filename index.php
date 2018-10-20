@@ -2,6 +2,7 @@
 include "database/conexao.php";
 include "database/consultas.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
