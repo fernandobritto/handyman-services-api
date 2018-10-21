@@ -12,7 +12,9 @@ include "database/consultas.php";
 
 $acoes_permitidas = [
     'adicionar', 
-    'excluir'
+    'excluir',
+    'aplicar_desconto',
+    'limpar_carrinho'
 ];
 
 function validaAcaoCarrinho(string $acao): bool
@@ -66,5 +68,31 @@ function excluirProdutoCarrinho(int $id): bool
         }
     }
     return false;
+}
+
+function calcularTotal(): float
+{
+    $total = .0; 
+    if(isset($_SESSION['carrinho']) && count($_SESSION['carrinho']) > 0)
+    {
+        foreach ($_SESSION['carrinho'] as $i => $item){
+             $total += $item['preco'];      
+        }
+    }
+    
+    return $total;
+}
+
+
+function aplicarDesconto(float &$valor)
+{
+    $pct = $_SESSION['desconto'] ?? 0;
+    $valor = $valor - ($valor * ($pct / 100));
+}
+
+function limparCarrinho(): void
+{
+    unset($_SESSION['carrinho']);
+    unset($_SESSION['desconto']);
 }
     

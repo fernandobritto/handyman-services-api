@@ -17,6 +17,7 @@ if(validaAcaoCarrinho($acao)){
             }
             break;
             
+            
          case "excluir":
             if(!is_int($id) || $id == 0){
                 die("Parâmetro Invalido!!!");
@@ -25,6 +26,23 @@ if(validaAcaoCarrinho($acao)){
                 header("location:carrinho.php");
             }
             break;
+            
+            
+          case "aplicar_desconto":
+            $desc = isset($_GET['desconto']) ? (int)$_GET['desconto'] : 0;
+            $_SESSION['desconto'] = $desc;
+            header("location:carrinho.php");            
+            break;
+        
+        
+        case "limpar_carrinho":
+            limparCarrinho();
+            header("location:/");            
+            break;
+        
+        
+        default:
+            die("Opção Invalida!");
     }      
     
 }else{

@@ -58,6 +58,45 @@
                 </tr>
                 <?php endforeach; endif; ?>
                 </tbody>
+                <?php  if(count($carrinho) > 0): ?>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="text-right">
+                            Total
+                        </td>
+                        <td >
+                            R$ <?php $total = calcularTotal(); echo number_format($total, 2, ",", ".") ?>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2" class="text-right">
+                            Desconto
+                        </td>
+                        <td colspan="2">
+                            <form action="gerenciamento.php">
+                                <input type="hidden" value="aplicar_desconto" name="acao">                                
+                                <input type="test" name="desconto" class="form-control" value="<?php echo $_SESSION['desconto'] ?? 0 ?>">
+                            </form>                            
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-right">
+                            <span class="float-left">
+                                <a href="gerenciamento.php?acao=limpar_carrinho">Limpar Carrinho</a>
+                                
+                            </span>
+                            Valor Final
+                        </td>
+                        <td colspan="2">
+                            R$ <?php aplicarDesconto($total); echo number_format($total, 2, ",", ".") ?>                           
+                        </td>
+                        
+                    </tr>
+                </tfoot>
+                <?php endif; ?>
             </table>
 
         </div>
