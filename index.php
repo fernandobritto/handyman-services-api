@@ -7,7 +7,7 @@ include "database/consultas.php";
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Carrinho de Compras em PHP7">
+        <meta name="description" content="Carrinho de Compras">
         <meta name="keywords" content="PHP,MySQL,BootStrap">
         <meta name="author" content="Fernando Britto">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
