@@ -12,4 +12,4 @@
 */
 
 
-Route::get('/', 'CoinsController@index');
+Route::get('/', 'GenesisController@start');
