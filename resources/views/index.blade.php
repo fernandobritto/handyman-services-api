@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Cotação de Cryptomoedas">
@@ -18,11 +18,11 @@
         <div class="col1">
             <div class="menu">
                 <ul>
-                    <li><a class="{{request()->routeIs('contents.*') ? 'active' : ''}}" href="#">BTC : Bitcoin</a></li>
-                    <li><a href="#">LTC : Litecoin</a></li>
-                    <li><a href="#">BCH : BCash</a></li>
-                    <li><a href="#">XRP : XRP (Ripple)</a></li>
-                    <li><a href="#">ETH : Ethereum</a></li>
+                    <li><a class="{{request()->routeIs('contents.*') ? 'active' : ''}}" href="{{ route('Bitcoin') }}">BTC : Bitcoin</a></li>
+                    <li><a href="{{ route('Litecoin') }}">LTC : Litecoin</a></li>
+                    <li><a href="{{ route('BCash') }}">BCH : BCash</a></li>
+                    <li><a href="{{ route('Ripple') }}">XRP : XRP (Ripple)</a></li>
+                    <li><a href="{{ route('Ethereum') }}">ETH : Ethereum</a></li>
 
                 </ul>
             </div>
