@@ -12,6 +12,11 @@
     padding: 10px;
 }
 
+.menu
+{
+    margin-top: 55px;
+}
+
 .menu ul
 {
     margin: 0px;
@@ -22,6 +27,7 @@
 .menu li
 {
     list-style: none;
+    padding-top: 20px;
 }
 
 .menu a
@@ -42,6 +48,7 @@
     background-color: #b9bcd0;
     color: #0000ff;
     font-weight: bold;
+    height: 25px;
 }
 
 .menu .active
