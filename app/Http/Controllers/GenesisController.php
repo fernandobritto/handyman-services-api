@@ -24,6 +24,9 @@ class GenesisController extends Controller
         $response = $client->request('GET', $coin.'ticker');
 
 
-        //dd(json_decode($response->getBody()->getContents()));
+        $coins = json_decode($response->getBody()->getContents());
+
+        return view('test/home', compact('coins'));
+
     }
 }
