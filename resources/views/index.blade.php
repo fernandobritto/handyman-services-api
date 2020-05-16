@@ -2,10 +2,14 @@
 <html lang="pt-br">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="Private photo album for upload to web system">
+    <meta name="keywords" content="Laravel">
+    <meta name="author" content="Fernando Britto">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>Álbum</title>
+    <title>Pictures web Stock</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         body { padding: 20px; }
         .navbar { margin-bottom: 20px; }
@@ -104,7 +108,7 @@
         <p class="float-right">
           <a href="#">Voltar para cima</a>
         </p>
-        <p>©2020 Sua empresa.com</p>
+        <p>©2020 <a href="http://fernandobritto.com.br/">Fernando Britto</a> </p>
       </div>
     </footer>
 
