@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -13,9 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //$post = Post::all();
-        //return view('index', compact(['post']));
-        return view('index');
+        $post = Post::all();
+        return view('index', compact(['post']));
+
     }
 
     /**
@@ -36,7 +37,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->email = $request->input('email');
+        $post->message = $request->input('message');
+        $post->file = $request->input('file');
+
     }
 
     /**
