@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/messages', 'MessageController@index')->name('msn');
-Route::post('/messages', 'MessageController@create')->name('send');
+Route::post('/messages', 'MessageController@send')->name('send');
 
 
 Auth::routes();

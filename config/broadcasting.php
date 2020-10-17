@@ -36,8 +36,9 @@ return [
             'secret' => env('PUSHER_APP_SECRET'),
             'app_id' => env('PUSHER_APP_ID'),
             'options' => [
-                'cluster' => env('PUSHER_APP_CLUSTER'),
-                'useTLS' => true,
+                'host' => env('POLIGONUX_HOST','localhost'),
+                'port' => env('POLIGONUX_PORT',6001),
+                'scheme' => env('POLIGONUX_SCHEME','http')
             ],
         ],
 
