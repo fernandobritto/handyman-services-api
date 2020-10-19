@@ -17,7 +17,11 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            Echo.channel('message-received')
+                .listen('SendMessage', (e) => {
+                    console.log(e);
+                })
+
         }
     }
 </script>
