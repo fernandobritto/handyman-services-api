@@ -1,0 +1,21 @@
+{
+  "name": "handyman",
+  "version": "1.0.0",
+  "description": "Handyman Services API",
+  "main": "index.js",
+  "repository": "https://github.com/fernandobritto/Handyman-Services-API.git",
+  "author": "Fernando Britto",
+  "scripts": {
+      "dev": "nodemon source/server.js"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "pg": "8.5.1",
+    "pg-hstore": "2.3.3",
+    "sequelize": "6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.7",
+    "sequelize-cli": "6.2.0"
+  }
+}
