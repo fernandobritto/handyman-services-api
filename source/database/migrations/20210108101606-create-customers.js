@@ -2,23 +2,29 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-
-    await queryInterface.createTable('workers', {
+    await queryInterface.createTable('customers', {
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false,
         },
+        worker_id: {
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            references: { model: 'workers', key: 'id' },
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
+        },
         name: {
             type: Sequelize.STRING,
             allowNull: false,
         },
-        email: {
+        zipcode: {
             type: Sequelize.STRING,
             allowNull: false,
         },
-        phone: {
+        address: {
             type: Sequelize.STRING,
             allowNull: false,
         },
@@ -31,12 +37,12 @@ module.exports = {
             type: Sequelize.DATE,
             allowNull: false,
         }
-    })
+    });
 
   },
 
   down: async (queryInterface, Sequelize) => {
-     await queryInterface.dropTable('workers')
+    await queryInterface.dropTable('customers');
 
   }
 };
