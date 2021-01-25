@@ -1,0 +1,24 @@
+{
+  "name": "handyman",
+  "version": "1.0.0",
+  "description": "Handyman Services API",
+  "main": "server.js",
+  "repository": "https://github.com/fernandobritto/Handyman-Services-API.git",
+  "author": "Fernando Britto",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "mariadb": "2.5.2",
+    "sequelize": "6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.7",
+    "sequelize-cli": "6.2.0",
+    "sucrase": "3.17.0"
+  }
+}
