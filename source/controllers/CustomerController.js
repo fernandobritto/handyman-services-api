@@ -27,14 +27,18 @@ class CustomerController {
     // STORE
     async store(req, res){
         try {
-            const { worker_id } = req.params
+            const {worker_id} = req.params
+            const {name,email,phone,cellphone,address,zipcode} = req.body
+
             const worker = await Worker.findByPk(worker_id)
 
             if(!worker){
                 return res.status(400).json({ error: 'Worker not found' })
             }
 
-            const customer = await Customer.create(req.body)
+            const customer = await Customer.create({
+                worker_id, name,email,phone,cellphone,address,zipcode
+            })
             return res.status(200).json(customer)
 
         } catch (error) {

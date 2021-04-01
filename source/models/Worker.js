@@ -57,4 +57,8 @@ export default class Worker extends Model {
 
     }
 
+    static associate(models){
+        this.hasMany(models.Customer , { foreignKey: 'worker_id', as: 'workers' })
+    }
+
 }
