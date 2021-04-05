@@ -53,7 +53,7 @@ export default class Customer extends Model{
     }
 
     static associate(models){
-        this.belongsTo(models.Worker, { foreignKey: 'worker_id', as: 'worker_id' })
+        this.belongsTo(models.Worker, { foreignKey: 'worker_id', as: 'Worker_id', onDelete: 'CASCADE' })
     }
 
 }
